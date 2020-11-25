@@ -17,26 +17,25 @@ class BlogPage extends React.Component {
     const blogPageResponse = await Request.getObject('blog');
     const blogPage = blogPageResponse.object;
     let blog = '';
-    if(!!query.slug)
-    {
-        const blogRes = await Request.getObject(query.slug);
-        blog = blogRes.object;
+    if (!!query.slug) {
+      const blogRes = await Request.getObject(query.slug);
+      blog = blogRes.object;
     }
     const blogs = blogResponse.objects;
     const globals = mapGlobals(Response.objects);
     return { globals, blogs, blog, blogPage };
   }
 
-  constructor(props){
+  constructor(props) {
     super(props);
   }
 
-	render() {
+  render() {
     return (
       <Meta>
         <Head>
-          <title>Medical Professional ~ Cosmic JS Next Js App</title>
-          <meta name="description" content={ this.props.blogPage.metadata.seo_description.value } />
+          <title>MVP ~ Cosmic JS Next Js App</title>
+          <meta name="description" content={this.props.blogPage.metadata.seo_description.value} />
           <link rel="icon" type="image/png" href={`${this.props.globals.header.metadata.favicon.imgix_url}?w=32`} sizes="32x32" />
           <link rel="icon" type="image/png" href={`${this.props.globals.header.metadata.favicon.imgix_url}?w=16`} sizes="16x16" />
         </Head>
@@ -44,8 +43,8 @@ class BlogPage extends React.Component {
         <Blog blogs={this.props.blogs} blog={this.props.blog}></Blog>
         <Footer footer={this.props.globals.footer} social={this.props.globals.social} contactInfo={this.props.globals.contact_info.metadata} />
       </Meta>
-		);
-	}
+    );
+  }
 }
 
 export default BlogPage;

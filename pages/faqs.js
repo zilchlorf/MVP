@@ -19,25 +19,25 @@ class FaqPage extends React.Component {
     return { globals, faq };
   }
 
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-        header: props.globals.header,
-        contact_form: props.globals.contact_form,
-        nav: props.globals.nav,
-        social: props.globals.social,
-        contactInfo: props.globals.contact_info.metadata,
-        footer: props.globals.footer,
-        faq: props.faq
+      header: props.globals.header,
+      contact_form: props.globals.contact_form,
+      nav: props.globals.nav,
+      social: props.globals.social,
+      contactInfo: props.globals.contact_info.metadata,
+      footer: props.globals.footer,
+      faq: props.faq
     }
   }
 
-	render() {
-		return (
+  render() {
+    return (
       <Meta>
         <Head>
-          <title>Medical Professional ~ Cosmic JS Next Js App</title>
-          <meta name="description" content={ this.state.faq.seo_description.value } />
+          <title>MVP ~ Cosmic JS Next Js App</title>
+          <meta name="description" content={this.state.faq.seo_description.value} />
           <link rel="icon" type="image/png" href={`${this.state.header.metadata.favicon.imgix_url}?w=32`} sizes="32x32" />
           <link rel="icon" type="image/png" href={`${this.state.header.metadata.favicon.imgix_url}?w=16`} sizes="16x16" />
         </Head>
@@ -45,8 +45,8 @@ class FaqPage extends React.Component {
         <Faq faq={this.state.faq}></Faq>
         <Footer footer={this.state.footer} social={this.state.social} contactInfo={this.state.contactInfo} />
       </Meta>
-		);
-	}
+    );
+  }
 }
 
 export default FaqPage;

@@ -51,7 +51,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                     <br />
                     <a href="https://cosmicjs.com" target="_blank">
                     <img className="pull-left mr-15 relative" src="https://cosmicjs.com/images/logo.svg" width="28" height="28" />
-                    <span style={{ marginLeft: '10px', color: '#666' }} >Proudly powered by Cosmic JS</span>
+                    <span style={{ marginLeft: '10px', color: '#666' }} >Proudly powered by React JS</span>
                     </a>
                 </div>
                 </div>
