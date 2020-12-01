@@ -45,7 +45,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                         </a>
                     </div>
                     <br />
-                    <div className="mb-20"> &copy; 2018 {footer.company_title}
+                    <div className="mb-20"> &copy; 2020 {footer.company_title}
                     </div>
                     <br />
                     <br />
